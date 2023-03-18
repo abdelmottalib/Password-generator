@@ -16,10 +16,12 @@ body {
 	font-family: play, sans-serif;
 }
 .password {
-	background-color: white;
+	/* background-color: white; */
 	margin: 0px 10px;
-	border-radius: 7px;
-	background-color: #EDF1D6;
+	/* border-radius: 7px; */
+	background-color: rgba(85, 214, 202, 0.2);
+	color: rgb(0, 251, 251);
+	border: 1px solid rgb(19, 168, 168);
 	height: 50px;
 }
 h2 {
@@ -86,7 +88,7 @@ input {
 	transform: scale(100%);
 }
 .password {
-	color: black;
+	/* color: black; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
