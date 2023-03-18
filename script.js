@@ -20,7 +20,7 @@ let lowerFlag = false;
 let numbersFlag = false;
 let symbolsFlag = false;
 let numbersOfFlags = 0;
-let length = 0;
+let length = 31;
 
 controls.forEach(control=> control.addEventListener('change', ()=> {
 	string = "";
@@ -32,14 +32,18 @@ controls.forEach(control=> control.addEventListener('change', ()=> {
 	numbersFlag = (numbersEl.checked ? true : false);
 	symbolsEl.checked ? string += symbols :string = string.replace(symbols, '').trim();
 	symbolsFlag = (symbolsEl.checked ? true : false);
+	console.log(upperFlag);
+	console.log(lowerFlag);
+	console.log(numbersFlag);
+	console.log(symbolsFlag);
+	valid();
 }))
 
-lengthEl.addEventListener('input', (e)=> {length = parseInt(e.target.value); valid()});
+// lengthEl.addEventListener('input', (e)=> {length = parseInt(e.target.value); valid()});
 
 
 valid();
 generateEl.addEventListener('click', ()=> {
-	console.log(length);
 	valid();
 	generatePass();
 	exactPass();
@@ -83,11 +87,13 @@ function generatePass() {
 }
 
 function valid() {
-	if ((!upperFlag && !lowerFlag && !numbersFlag && !symbolsFlag) && (length <= 4 || length >= 31)) {
+	if ((!upperFlag && !lowerFlag && !numbersFlag && !symbolsFlag)) {
 		generateEl.classList.add('disabled');
+		generateEl.disabled = true;
 	}
 	else {
 		generateEl.classList.remove('disabled');
+		// generateEl.disabled = false;
 	}
 }
 
