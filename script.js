@@ -83,7 +83,7 @@ function generatePass() {
 }
 
 function valid() {
-	if ((!upperFlag && !lowerFlag && !numbers && !symbols) || (length < 4)) {
+	if ((!upperFlag && !lowerFlag && !numbersFlag && !symbolsFlag) && (length <= 4)) {
 		generateEl.classList.add('disabled');
 	}
 	else {
