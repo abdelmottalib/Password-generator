@@ -1,7 +1,7 @@
 const alphaUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const alphaLower = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789"
-const symbols = "!@#$%^&*()-_=+[]{};:'\",.<>/?\\|";
+const symbols = "!@#$%^&*()";
 
 const generateEl = document.getElementById('generate');
 const upperEl = document.getElementById('upper');
@@ -39,6 +39,7 @@ lengthEl.addEventListener('input', (e)=> {length = parseInt(e.target.value); val
 
 valid();
 generateEl.addEventListener('click', ()=> {
+	console.log(length);
 	valid();
 	generatePass();
 	exactPass();
@@ -64,7 +65,7 @@ function exactPass() {
 				counter++;
 		}
 		if (symbolsFlag) {
-			if (/[!@#$%^&*()-_=+\[\]{};:'",.<>\/?\\|]/.test(password))
+			if (/[!@#$%^&*()]/.test(password))
 				counter++;
 		}
 		if (counter == numbersOfFlags)
@@ -82,7 +83,7 @@ function generatePass() {
 }
 
 function valid() {
-	if ((!upperFlag && !lowerFlag && !numbers && !symbols) || (length <= 4)) {
+	if ((!upperFlag && !lowerFlag && !numbers && !symbols) || (length < 4)) {
 		generateEl.classList.add('disabled');
 	}
 	else {
