@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,300;0,400;0,500;0,700;1,600&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,100&display=swap');
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: white;
+	background-color: #2C3333;
+	font-family: poppins, sans-serif;
+}
+.password {
+	background-color: white;
+	margin: 0px 10px;
+	border-radius: 7px;
+	background-color: #EDF1D6;
+	height: 50px;
+}
+h2 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.main-div {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-between; */
+	text-align: center;
+	width: 370px;
+	border: solid 1px black;
+	border-radius: 7px;
+	background-color: #609966;
+	box-shadow: 0px 1px 2px 1px rgba(255, 255, 255, 0.2);
+}
+.options {
+	display: flex;
+	flex-direction: column;
+	/* background-color: aqua; */
+	width: 100%;
+	padding: 15px 30px;
+	text-align: left;
+}
+
+.options > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 10px 0;
+}
+
+#generate {
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 7px;
+	background-color: #9DC08B;
+	border-style: none;
+	color: white;
+	font-family: inherit;
+	border-radius: 5px;
+}
+input {
+	width: 50px;
+	border-radius: 2px;
+	border-style: none;
+	color: rgb(41, 40, 40);
+	outline: none;
+	font-family: inherit;
+}
+#generate:active {
+	transform: scale(98%);
+}
+#length {
+	text-align: center;
+	/* background-color: transparent;
+	border-bottom: 1px solid rgb(64, 106, 1); */
+}
+.disabled {
+	filter: brightness(0.5);
+	transform: scale(100%);
+}
+.password {
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
