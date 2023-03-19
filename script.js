@@ -93,7 +93,7 @@ function valid() {
 	}
 	else {
 		generateEl.classList.remove('disabled');
-		// generateEl.disabled = false;
+		generateEl.disabled = false;
 	}
 }
 
