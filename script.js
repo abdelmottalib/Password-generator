@@ -10,6 +10,7 @@ const numbersEl = document.getElementById('numbers');
 const controls = document.querySelectorAll('.controls');
 const symbolsEl = document.getElementById('symbols');
 const main = document.querySelector('.main-div');
+const copy = document.getElementById('copy');
 const screen = document.querySelector('.password');
 const lengthEl = document.getElementById('length')
 
@@ -20,7 +21,7 @@ let lowerFlag = false;
 let numbersFlag = false;
 let symbolsFlag = false;
 let numbersOfFlags = 0;
-let length = 31;
+let length = 0;
 
 controls.forEach(control=> control.addEventListener('change', ()=> {
 	string = "";
@@ -39,7 +40,7 @@ controls.forEach(control=> control.addEventListener('change', ()=> {
 	valid();
 }))
 
-// lengthEl.addEventListener('input', (e)=> {length = parseInt(e.target.value); valid()});
+lengthEl.addEventListener('input', (e)=> {length = parseInt(e.target.value); valid()});
 
 
 valid();
@@ -48,6 +49,10 @@ generateEl.addEventListener('click', ()=> {
 	generatePass();
 	exactPass();
 	screen.innerHTML = password;
+})
+
+copy.addEventListener('click', ()=> {
+	navigator.clipboard.writeText(password);
 })
 
 function exactPass() {

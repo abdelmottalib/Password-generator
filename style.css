@@ -23,6 +23,23 @@ body {
 	color: rgb(0, 251, 251);
 	border: 1px solid rgb(19, 168, 168);
 	height: 50px;
+	overflow: hidden;
+	position: relative;
+}
+#copy {
+	background-color: yellow;
+	/* border: 1px solid rgb(19, 168, 168); */
+	border: none;
+	border-radius: 5px;
+	color: white;
+	width: 27px;
+	height: 27px;
+	position: absolute;
+	left: 555px;
+	bottom: 775px;
+}
+#copy:active {
+	transform: scale(98%);
 }
 h2 {
 	margin-top: 15px;
